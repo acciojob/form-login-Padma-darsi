@@ -1,8 +1,11 @@
 function getFormvalue(event) {
-    //Write your code here
-	event.preventDefault();
-    const fname=document.getElementById("fname").value;
-	const lname=document.getElementById("lname").value; 
-	const alertMessage=`${fname} ${lname}`;
-	alert(alertMessage);
+    // Prevent default form submission behavior
+    event.preventDefault();
+
+    // Get values from input fields
+    const fname = document.querySelector('input[name="fname"]').value;
+    const lname = document.querySelector('input[name="lname"]').value;
+
+    // Display alert with the full name
+    alert(`${fname} ${lname}`);
 }
